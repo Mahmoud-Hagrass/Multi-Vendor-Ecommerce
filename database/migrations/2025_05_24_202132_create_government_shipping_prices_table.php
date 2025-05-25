@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('government_shipping_prices', function (Blueprint $table) {
             $table->id();
-            $table->string('name') ; 
-            $table->string('email')->unique() ; 
-            $table->string('password') ;
-            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade'); 
+            $table->foreignId('country_id')->constrained('countries')->onDelete('cascade') ; 
+            $table->foreignId('governemt_id')->constrained('governments')->onDelete('cascade') ; 
+            $table->decimal('shipping_price' , 8 , 2) ; 
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('government_shipping_prices');
     }
 };
