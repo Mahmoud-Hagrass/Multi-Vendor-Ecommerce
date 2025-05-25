@@ -176,26 +176,19 @@
                 <a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a>
                 <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
                 <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
-                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="ft-power"></i> Logout</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0)" onclick="document.getElementById('delete_auth_admin').submit()">
+                  <i class="ft-power"></i> 
+                  {{ __('dashboard.logout') }}
+                </a>
               </div>
             </li>
+            <form action="{{ route('admin.logout') }}" method="POST" id="delete_auth_admin">
+              @csrf
+            </form>
 
             <!--Language Switcher-->
-            <li class="dropdown dropdown-language nav-item">
-                <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="flag-icon flag-icon-{{ LaravelLocalization::getCurrentLocale() == 'en' ? 'gb' : 'eg' }}"></i>
-                  <span class="selected-language"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                  @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                    <a class="dropdown-item" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                      <i class="flag-icon flag-icon-{{ ($localeCode == 'en') ? 'gb' : 'eg' }}"></i> 
-                      {{ $properties['native'] }}
-                    </a>
-                  @endforeach
-                </div>
-             </li>
+          <x-language-switcher></x-language-switcher>
 
             <li class="dropdown dropdown-notification nav-item">
               <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
