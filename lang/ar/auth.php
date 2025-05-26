@@ -12,15 +12,16 @@ return [
     |
     */
 
-    'login'                          => 'تسجيل الدخول' , 
-    'easily_using'                   => 'سجل بسهولة عبر' , 
-    'or_using_account_details'       => 'او استخدام بيانات الحساب' , 
-    'forget_password'                => 'هل نسيت كلمة السر؟' , 
-    'reset_password'                 => 'اعادة تعين كلمة المرور' ,  
+    'login'                          => 'تسجيل الدخول' ,
+    'easily_using'                   => 'سجل بسهولة عبر' ,
+    'or_using_account_details'       => 'او استخدام بيانات الحساب' ,
+    'forget_password'                => 'هل نسيت كلمة السر؟' ,
+    'reset_password'                 => 'اعادة تعين كلمة المرور' ,
     'create_account'                 => 'انشاء حساب' ,
-    'already_have_account'           => 'هل لديك حساب بالفعل؟' , 
-    'enter_name'                     => 'ادخل الاسم' , 
-    'enter_email'                    => 'ادخل الايميل' , 
-    'enter_password'                 => 'ادخل كلمة المرور' , 
+    'already_have_account'           => 'هل لديك حساب بالفعل؟' ,
+    'enter_name'                     => 'ادخل الاسم' ,
+    'enter_email'                    => 'ادخل الايميل' ,
+    'enter_password'                 => 'ادخل كلمة المرور' ,
     'enter_password_confirmation'    => 'ادخل تأكيد كلمة المرور' ,
+    'remember_me'                    => 'تذكرني' ,
 ];

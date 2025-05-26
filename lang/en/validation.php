@@ -173,8 +173,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'g-recaptcha-response' => [
+            'required' => 'Recaptcha Field Is Required',
         ],
     ],
 
@@ -192,7 +192,7 @@ return [
     'attributes' => [
         'name'                  => 'Name',
         'username'              => 'Username',
-        'email'                 => 'Email', 
+        'email'                 => 'Email',
         'password'              => 'Password'
     ],
 

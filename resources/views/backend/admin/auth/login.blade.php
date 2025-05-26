@@ -26,8 +26,8 @@
           </li>
         </ul>
       </div>
-      
-      @if(LaravelLocalization::getCurrentLocale() == 'en')       
+
+      @if(LaravelLocalization::getCurrentLocale() == 'en')
         <div style="display: flex; align-items: center; margin-left: auto; margin-right: 150px;">
             <div style="list-style: none; display: inline-block; padding: 8px 0;">
             <x-language-switcher />
@@ -102,6 +102,16 @@
                           <i class="la la-key"></i>
                         </div>
                       </fieldset>
+                      <fieldset>
+                            <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                            <span class="ms-2 text-sm text-gray-600">{{ __('auth.remember_me') }}</span><br/><br/>
+                      </fieldset>
+                       {!! NoCaptcha::renderJs() !!}
+                       {!! NoCaptcha::display() !!}
+                      @error('g-recaptcha-response')
+                        <strong class="text-danger">{{ $message }}</strong>
+                      @enderror
+                      <br/>
                       <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i> {{ __('auth.login') }}</button>
                     </form>
                   </div>
