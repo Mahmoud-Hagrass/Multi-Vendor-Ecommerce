@@ -79,6 +79,7 @@ return [
         'string'  => 'يجب أن لا يتجاوز طول النّص :attribute :max حروفٍ/حرفًا',
         'array'   => 'يجب أن لا يحتوي :attribute على أكثر من :max عناصر/عنصر.',
     ],
+    'max_digits' => 'يجب أن لا يحتوي :attribute على أكثر من :max رقم.',
     'mimes'                => 'يجب أن يكون ملفًا من نوع : :values.',
     'mimetypes'            => 'يجب أن يكون ملفًا من نوع : :values.',
     'min'                  => [
@@ -144,10 +145,12 @@ return [
     */
 
     'attributes' => [
-        'name'                  => 'الاسم',
-        'username'              => 'اسم المُستخدم',
-        'email'                 => 'البريد الالكتروني', 
-        'password'              => 'كلمة المرور'
+        'name'                              => 'الاسم',
+        'username'                          => 'اسم المُستخدم',
+        'email'                             => 'البريد الالكتروني',
+        'password'                          => 'كلمة المرور' ,
+        'password_confirmation'             => 'تأكيد كلمة المرور' ,
+        'otp'                               => 'رمز التأكيد' ,
     ],
 
 

@@ -24,4 +24,15 @@ return [
     'enter_password'                 => 'ادخل كلمة المرور' ,
     'enter_password_confirmation'    => 'ادخل تأكيد كلمة المرور' ,
     'remember_me'                    => 'تذكرني' ,
+    'enter_otp'                      => 'ادخل الرمز التأكيدى ' ,
+    'invalid_otp'                    => 'الرمز التأكيدى غير صحيح' ,
+    'reset_password'                 => 'استرجاع كلمة المرور' ,
+    'new_password'                   => 'كلمة المرور الجديدة' ,
+    'new_password_confirm'           => 'تأكيد كلمة المرور' ,
+    'send'                           => 'ارسال' ,
+    'confirm_password'               => 'تأكيد كلمة المرور' ,
+    'login_successfully'             => 'تم تسجيل الدخول بنجاح' ,
+    'password_updated_successfully'  => 'تم تعديل كلمة المرور بنجاح' ,
+
+
 ];

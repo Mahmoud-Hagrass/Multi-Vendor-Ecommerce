@@ -115,7 +115,7 @@
                       <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i> {{ __('auth.login') }}</button>
                     </form>
                   </div>
-                    <p class="text-center"><a href="recover-password.html" class="card-link">{{ __('auth.forget_password') }}</a></p>
+                    <p class="text-center"><a href="{{ route('admin.password.email') }}" class="card-link">{{ __('auth.forget_password') }}</a></p>
                 </div>
               </div>
             </div>

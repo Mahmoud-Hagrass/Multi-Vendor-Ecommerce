@@ -1,10 +1,5 @@
 @php
-    $cssStyle = '' ;
-    if(LaravelLocalization::getCurrentLocale() == 'en'){
-        $cssStyle = 'css' ; 
-    }else{
-        $cssStyle = 'css-rtl' ; 
-    }
+    $cssStyle = LaravelLocalization::getCurrentLocale() == 'en' ? 'css' : 'css-rtl' ;
 @endphp
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,4 +29,9 @@
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="{{ asset('assets/assets-back')}}/{{ $cssStyle }}/style.css">
   <!-- END Custom CSS-->
+  <!-- Toastr CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+  <!-- jQuery (required for toastr) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>

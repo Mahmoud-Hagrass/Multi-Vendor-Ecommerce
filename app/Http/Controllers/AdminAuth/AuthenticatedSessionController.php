@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminAuth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Admin\AdminAuth\LoginRequest ;
+use Flasher\Laravel\Facade\Flasher;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,8 +28,10 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate('admin');
 
         $request->session()->regenerate();
-
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.index')->with([
+            'message' => __('auth.login_successfully'),
+            'alert-type' => 'success'
+        ]);
     }
 
     /**

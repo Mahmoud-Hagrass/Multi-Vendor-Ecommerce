@@ -25,4 +25,12 @@ return [
     'enter_password'                 => 'Enter Password' ,
     'enter_password_confirmation'    => 'Enter Password Confirmation' ,
     'remember_me'                    => 'Remember Me' ,
+    'enter_otp'                      => 'Enter OTP Code' ,
+    'invalid_otp'                    => 'Invalid Otp' ,
+    'reset_password'                 => 'Reset Password' ,
+    'new_password'                   => 'New Password' ,
+    'new_password_confirm'           => 'Password Confirmation' ,
+    'send'                           => 'Send' , 
+    'login_successfully'             => 'Login Successfully' ,
+    'password_updated_successfully'  => 'Password Updated Successfully' ,
 ];

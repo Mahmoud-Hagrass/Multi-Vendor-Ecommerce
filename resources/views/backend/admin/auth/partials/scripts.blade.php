@@ -13,4 +13,6 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="{{ asset('assets/assets-back')}}/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
+   <!-- Toastr JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>

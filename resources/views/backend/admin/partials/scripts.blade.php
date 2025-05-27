@@ -16,3 +16,8 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="{{ asset('assets/assets-back') }}/js/scripts/pages/dashboard-sales.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
+  <!-- for toaster-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<!-- for toaster-->
+  @include('backend.admin.partials.toaster_notification')
+</script>
