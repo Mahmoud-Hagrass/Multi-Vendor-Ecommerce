@@ -8,12 +8,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['as' => 'admin.'],function(){
     Route::get('/dashboard', [DashboardController::class , 'index'])->middleware('admin')->name('index');
-    Route::get('/password/email' , [ForgetPasswordController::class,'showForgetPasswordForm'])->name('password.email') ;
-    Route::post('/password/verify' , [ForgetPasswordController::class, 'sendOtpToEmail'])->name('password.verify') ;
-    Route::get('/password/verify/{email}/otp' , [ForgetPasswordController::class, 'verifyOtpCode'])->name('password.verify-otp') ;
-    Route::post('/password/reset' , [PasswordResetController::class, 'passwordReset'])->name('password.reset') ;
-    Route::get('/password/reset/form/{email}' , [PasswordResetController::class , 'resetPasswordForm'])->name('password.reset-form') ;
-    Route::post('/password/store' , [PasswordResetController::class , 'storeNewPassword'])->name('password.store') ;
+         ###################### Forget Password Routes #######################
+    Route::prefix('/password')->controller(ForgetPasswordController::class)->name('password.')->group(function(){
+        Route::get('/email' , 'showForgetPasswordForm')->name('email') ;
+        Route::post('/verify' , 'sendOtpToEmail')->name('verify') ;
+        Route::get('/verify/{email}/otp/{token}' ,  'verifyOtpCode')->name('verify-otp') ;
+    }) ;
+
+        ###################### Reset Password Routes #########################
+    Route::prefix('/password')->controller(PasswordResetController::class)->name('password.')->group(function(){
+        Route::post('/reset/{token}' ,  'passwordReset')->name('reset') ;
+        Route::get('/reset/form/{email}/{token}' , 'resetPasswordForm')->name('reset-form') ;
+        Route::post('/store/{token}' ,  'storeNewPassword')->name('store') ;
+    });
+
     require __DIR__.'/adminAuth.php';
 });
 

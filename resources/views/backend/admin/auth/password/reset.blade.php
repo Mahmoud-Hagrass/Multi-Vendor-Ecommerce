@@ -62,7 +62,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
                 </div>
                 <div class="card-content">
                   <div class="card-body">
-                    <form class="form-horizontal" action="{{ route('admin.password.store') }}" method="POST">
+                    <form class="form-horizontal" action="{{ route('admin.password.store' , ['token' => $token]) }}" method="POST">
                         @csrf
                         <fieldset class="form-group position-relative has-icon-left">
                             <input type="hidden" name="email" value="{{ $email }}" class="form-control form-control-lg input-lg">
@@ -90,7 +90,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
                                 <i class="ft-lock"></i>
                             </div>
                         </fieldset>
-
+                         <input type="hidden" name="token" class="form-control form-control-lg input-lg" value="{{ $token }}">
                         <button type="submit" class="btn btn-outline-info btn-lg btn-block">
                             <i class="ft-unlock"></i> {{ __('auth.reset_password') }}
                         </button>

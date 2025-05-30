@@ -62,7 +62,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
                 </div>
                 <div class="card-content">
                   <div class="card-body">
-                    <form class="form-horizontal" action="{{ route('admin.password.reset') }}" method="POST">
+                    <form class="form-horizontal" action="{{ route('admin.password.reset' , ['token' => $token]) }}" method="POST">
                        <fieldset class="form-group position-relative has-icon-left">
                         <input type="hidden" name="email" value="{{ $email }}" class="form-control form-control-lg input-lg" id="user-email">
                         <div class="form-control-position">
@@ -75,6 +75,12 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
                             @error('otp')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
+                        <div class="form-control-position">
+                          <i class="ft-mail"></i>
+                        </div>
+                      </fieldset>
+                      <fieldset class="form-group position-relative has-icon-left">
+                        <input type="hidden" name="token" class="form-control form-control-lg input-lg" id="user-email" value="{{ $token }}">
                         <div class="form-control-position">
                           <i class="ft-mail"></i>
                         </div>
