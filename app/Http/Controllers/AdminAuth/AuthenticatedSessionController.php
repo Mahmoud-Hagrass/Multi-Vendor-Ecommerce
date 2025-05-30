@@ -4,6 +4,7 @@ namespace App\Http\Controllers\AdminAuth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Admin\AdminAuth\LoginRequest ;
+use App\Services\Auth\AuthService;
 use Flasher\Laravel\Facade\Flasher;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -15,6 +16,12 @@ class AuthenticatedSessionController extends Controller
     /**
      * Display the login view.
      */
+    protected $authService ;
+
+    public function __construct(AuthService $authService)
+    {
+        $this->authService = $authService ;
+    }
     public function create(): View
     {
         return view('backend/admin/auth/login');
@@ -25,9 +32,15 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        $request->authenticate('admin');
+        $loggedin = $this->authService->login($request , 'admin') ;
 
-        $request->session()->regenerate();
+        if(!$loggedin){
+            return redirect()->back()->with([
+                'message' => __('auth.failed'),
+                'alert-type' => 'error',
+            ]) ;
+        }
+
         return redirect()->route('admin.index')->with([
             'message' => __('auth.login_successfully'),
             'alert-type' => 'success'

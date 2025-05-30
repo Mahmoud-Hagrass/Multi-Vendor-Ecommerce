@@ -27,10 +27,11 @@ return [
     'remember_me'                    => 'Remember Me' ,
     'enter_otp'                      => 'Enter OTP Code' ,
     'invalid_otp'                    => 'Invalid Otp' ,
+    'invalid'                        => 'Invalid' , 
     'reset_password'                 => 'Reset Password' ,
     'new_password'                   => 'New Password' ,
     'new_password_confirm'           => 'Password Confirmation' ,
-    'send'                           => 'Send' , 
+    'send'                           => 'Send' ,
     'login_successfully'             => 'Login Successfully' ,
     'password_updated_successfully'  => 'Password Updated Successfully' ,
 ];

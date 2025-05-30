@@ -26,6 +26,7 @@ return [
     'remember_me'                    => 'تذكرني' ,
     'enter_otp'                      => 'ادخل الرمز التأكيدى ' ,
     'invalid_otp'                    => 'الرمز التأكيدى غير صحيح' ,
+    'invalid'                        => 'حدث خطأ' ,
     'reset_password'                 => 'استرجاع كلمة المرور' ,
     'new_password'                   => 'كلمة المرور الجديدة' ,
     'new_password_confirm'           => 'تأكيد كلمة المرور' ,
