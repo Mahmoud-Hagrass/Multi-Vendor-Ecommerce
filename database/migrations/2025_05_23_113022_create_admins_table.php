@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
-            $table->string('name') ; 
-            $table->string('email')->unique() ; 
+            $table->string('name') ;
+            $table->string('email')->unique() ;
             $table->string('password') ;
             $table->rememberToken();
-            // $table->foreignId('role_id')->nullable()->constrained('roles')->onDelete('cascade'); 
+            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
+            $table->string('image')->nullable() ;
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

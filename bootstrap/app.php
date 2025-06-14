@@ -30,16 +30,17 @@ return Application::configure(basePath: dirname(__DIR__))
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         ]);
-        
-        $middleware->redirectUsersTo('/admin/dashboard') ; 
-        
+
+        $middleware->redirectUsersTo('/admin/dashboard') ;
+
         $middleware->alias([
             'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
             'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
             'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
             'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
             'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
-            'admin'                   => \App\Http\Middleware\CheckAdminAuth::class,
+            'able'                    => \App\Http\Middleware\CheckAuthorization::class ,
+            'admin'                   => \App\Http\Middleware\CheckAdminAuth::class ,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

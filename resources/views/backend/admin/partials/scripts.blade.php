@@ -21,3 +21,5 @@
 <!-- for toaster-->
   @include('backend.admin.partials.toaster_notification')
 </script>
+
+@stack('js')

@@ -93,7 +93,7 @@ return [
     'numeric'              => 'يجب على :attribute أن يكون رقمًا',
     'present'              => 'يجب تقديم :attribute',
     'regex'                => 'صيغة :attribute .غير صحيحة',
-    'required'             => ':attribute مطلوب.',
+    'required'             => 'حقل :attribute مطلوب.',
     'required_if'          => ':attribute مطلوب في حال ما إذا كان :other يساوي :value.',
     'required_unless'      => ':attribute مطلوب في حال ما لم يكن :other يساوي :values.',
     'required_with'        => ':attribute مطلوب إذا توفّر :values.',
@@ -128,7 +128,7 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
-        'g-recaptcha-response'=>[
+        'g-recaptcha-response' => [
             'required' => 'يجب عليك التحقق من أنك لست روبوت',
         ]
     ],
@@ -148,9 +148,14 @@ return [
         'name'                              => 'الاسم',
         'username'                          => 'اسم المُستخدم',
         'email'                             => 'البريد الالكتروني',
-        'password'                          => 'كلمة المرور' ,
-        'password_confirmation'             => 'تأكيد كلمة المرور' ,
-        'otp'                               => 'رمز التأكيد' ,
+        'password'                          => 'كلمة المرور',
+        'password_confirmation'             => 'تأكيد كلمة المرور',
+        'otp'                               => 'رمز التأكيد',
+        'name.en'                           => 'اسم الدور (انجليزى)' ,
+        'name.ar'                           => 'اسم الدور (عربى)' ,
+        'permissions'                       => 'الصلاحيات' ,
+        'role_id'                           => 'الدور' ,
+        'status'                            => 'الحالة' ,
     ],
 
 

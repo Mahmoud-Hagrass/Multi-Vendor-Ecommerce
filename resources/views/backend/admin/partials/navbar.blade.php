@@ -166,7 +166,9 @@
             <li class="dropdown dropdown-user nav-item">
               <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                 <span class="mr-1">Hello,
-                  <span class="user-name text-bold-700">John Doe</span>
+                    @auth('admin')
+                        <span class="user-name text-bold-700">{{ Auth::guard('admin')->user()->name }}</span>
+                    @endauth
                 </span>
                 <span class="avatar avatar-online">
                   <img src="{{ asset('assets/assets-back') }}/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>

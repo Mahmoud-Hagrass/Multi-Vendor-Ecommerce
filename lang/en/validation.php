@@ -196,6 +196,11 @@ return [
         'password'                        => 'Password',
         'password_confirmation'           => 'Password confirmation' ,
         'otp'                             => 'Otp' ,
+        'name.en'                         => 'Role Name(English)' ,
+        'name.ar'                         => 'Role Name(Arabic)' ,
+        'permissions'                     => 'Permissions' ,
+        'role_id'                         => 'Role' ,
+        'status'                          => 'Status' , 
     ],
 
 ];

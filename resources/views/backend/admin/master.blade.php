@@ -12,7 +12,6 @@
   @include('backend.admin.partials.sidebar')
   @yield('content')
   <!-- ////////////////////////////////////////////////////////////////////////////-->
-  @include('backend.admin.partials.footer')
   <!-- BEGIN VENDOR JS-->
   @include('backend.admin.partials.scripts')
 </body>
