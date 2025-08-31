@@ -25,7 +25,7 @@ class Admin extends Authenticatable
             return false;
         }
 
-        
+
         foreach ($this->role->permissions ?? [] as $permission) {
             if ($permission === $permissionKey) {  // Strict comparison
                 return true;

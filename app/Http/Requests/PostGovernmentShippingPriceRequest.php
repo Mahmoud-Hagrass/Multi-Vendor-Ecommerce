@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Backend\Admin\Role;
+namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRoleRequest extends FormRequest
+class PostGovernmentShippingPriceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,11 +21,9 @@ class StoreRoleRequest extends FormRequest
      */
     public function rules(): array
     {
-        $role_id = $this->route('role') ;
         return [
-            'name.en'        => ['required', 'string', 'min:3', 'max:60', 'unique_translation:roles,name,'.$role_id],
-            'name.ar'        => ['required', 'string', 'min:3', 'max:60', 'unique_translation:roles,name,'.$role_id],
-            'permissions'    => ['required', 'array', 'min:1', 'max:80'],
+            'government_id'      => ['required' , 'exists:governments,id' , 'min:1'] ,
+            'new_shipping_price' => ['required' ,  'numeric', 'min:0' , 'max:9999.99']
         ];
     }
 }

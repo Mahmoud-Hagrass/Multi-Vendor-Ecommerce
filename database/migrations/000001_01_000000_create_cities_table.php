@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique() ; 
-            $table->string('slug')->unique() ; 
+            $table->json('name') ;
             $table->foreignId('government_id')->constrained('governments')->onDelete('cascade') ;
-            $table->boolean('status')->default(1) ; 
+            $table->boolean('status')->default(1) ;
         });
     }
 

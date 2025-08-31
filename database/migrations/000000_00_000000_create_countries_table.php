@@ -13,9 +13,19 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique() ;
-            $table->string('slug')->unique() ;
-            $table->boolean('status')->default(1) ; 
+            $table->json('name') ;
+            $table->string('phone_code')->unique() ;
+            $table->string('flag')->unique() ;
+            $table->string('capital') ;
+            $table->string('currency') ;
+            $table->string('currency_name') ;
+            $table->string('currency_symbol') ;
+            $table->string('region') ;
+            $table->string('subregion') ;
+            $table->string('latitude') ;
+            $table->string('longitude') ;
+            $table->json('timezones') ;
+            $table->boolean('status')->default(1) ;
         });
     }
 

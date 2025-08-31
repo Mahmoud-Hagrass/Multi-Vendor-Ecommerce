@@ -34,8 +34,14 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @auth('admin')
+                                                @php
+                                                    $authAdmin = Auth::guard('admin')->user() ;
+                                                @endphp
+                                            @endauth
                                             @forelse ($admins as $admin)
                                                 <tr>
+                                                  @if($admin->id != $authAdmin->id && $admin->role_id != 1)
                                                     <td>{{ $loop->iteration }}</td>
                                                     <td>{{ $admin->name }}</td>
                                                     <td>{{ $admin->email }}</td>
@@ -62,19 +68,18 @@
                                                                     </a>
                                                                 @endcan
 
-                                                                @if($admin->status == __('dashboard.active'))
-                                                                  @can('admin_change_status')
-                                                                    <a class="dropdown-item" href="{{ route('admin.admins.change-status', $admin->id) }}">
-                                                                        <i class="la la-ban"></i> {{ __('dashboard.in_active') }}
-                                                                    </a>
-                                                                  @endcan
-                                                                @else
-                                                                    @can('admin_change_status')
+                                                               @can('admin_change_status')
+                                                                    @if($admin->status == __('dashboard.active'))
+                                                                        <a class="dropdown-item" href="{{ route('admin.admins.change-status', $admin->id) }}">
+                                                                            <i class="la la-ban"></i> {{ __('dashboard.in_active') }}
+                                                                        </a>
+                                                                    @else
                                                                         <a class="dropdown-item" href="{{ route('admin.admins.change-status', $admin->id) }}">
                                                                             <i class="la la-check-circle"></i> {{ __('dashboard.active') }}
                                                                         </a>
-                                                                    @endcan
-                                                                @endif
+                                                                    @endif
+                                                                @endcan
+
 
                                                                 <form id="delete_admin_{{ $admin->id }}" action="{{ route('admin.admins.destroy', $admin->id) }}" method="POST">
                                                                     @csrf
@@ -84,6 +89,7 @@
                                                         </div>
                                                     </td>
                                                 </tr>
+                                              @endif
                                             @empty
                                                     <tr>
                                                         <td colspan="20" class="text-center text-muted">

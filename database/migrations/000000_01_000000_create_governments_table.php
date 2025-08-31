@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('governments', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique() ;
-            $table->string('slug')->unique() ; 
-            $table->foreignId('country_id')->constrained('countries')->onDelete('cascade') ; 
-            $table->boolean('status')->default(1)  ; 
+            $table->json('name') ;
+            $table->foreignId('country_id')->constrained('countries')->onDelete('cascade') ;
+            $table->boolean('status')->default(1)  ;
         });
     }
 

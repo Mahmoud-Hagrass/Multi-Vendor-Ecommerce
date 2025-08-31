@@ -200,7 +200,8 @@ return [
         'name.ar'                         => 'Role Name(Arabic)' ,
         'permissions'                     => 'Permissions' ,
         'role_id'                         => 'Role' ,
-        'status'                          => 'Status' , 
+        'status'                          => 'Status' ,
+        'new_shipping_price'              => 'New Shipping Price' , 
     ],
 
 ];

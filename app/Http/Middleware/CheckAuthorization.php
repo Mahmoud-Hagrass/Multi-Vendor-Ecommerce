@@ -23,13 +23,16 @@ class CheckAuthorization
              return redirect()->route('admin.login');
          }
          if ($admin) {
-             if (is_string($permissions)) {
-                 $permissions = [$permissions];
-             }
              foreach ($permissions as $permission) {
-                  if (!$admin->can($permission)) {
-                     abort(403, 'You do not have permission to access this page.');
-                 }
+                if (!\Illuminate\Support\Facades\Gate::has($permission)) {
+                    abort(403, 'Permission "' . $permission . '" is not defined.');
+                }
+                if (!is_string($permission)) {
+                    continue; // تجاهل القيم غير الصحيحة
+                }
+                if (!$admin->can($permission)) {
+                    abort(403, 'You do not have permission to access this page.');
+                }
              }
          }
           return $next($request);

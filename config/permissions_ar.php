@@ -37,8 +37,6 @@ return [
         'admin_create'                           => 'إنشاء مشرف',
         'admin_update'                           => 'تحديث مشرف',
         'admin_delete'                           => 'حذف مشرف',
-        'admin_block'                            => 'حظر مشرف',
-        'admin_unblock'                          => 'إلغاء حظر مشرف',
         'admin_active_list'                      => 'قائمة المشرفين النشطين',
         'admin_inactive_list'                    => 'قائمة المشرفين غير النشطين',
         'admin_change_status'                    => 'تغير حالة المشرف' ,
@@ -52,10 +50,10 @@ return [
         'setting_show'                           => 'عرض الإعدادات',
         'setting_update'                         => 'تحديث الإعدادات',
 
-        'government_shipping_price_show'         => 'عرض أسعار الشحن للمحافظات',
-        'government_shipping_price_create'       => 'إنشاء سعر شحن لمحافظة',
-        'government_shipping_price_update'       => 'تحديث سعر شحن لمحافظة',
-        'government_shipping_price_delete'       => 'حذف سعر شحن لمحافظة',
+        'government_shipping_management'         => 'ادارة الشحن' ,
+        'government_shipping_price_change'       => 'تغيير سعر شحن لمحافظة',
+        'government_change_status'               => 'تغيير حالة المحافظة',
+        'country_change_status'                  => 'تغيير حالة الدولة',
 
         'faq_show'                               => 'عرض الأسئلة الشائعة',
         'faq_create'                             => 'إنشاء سؤال شائع',

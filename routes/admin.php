@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\Admin\Auth\Password\PasswordResetController;
 use App\Http\Controllers\Backend\Admin\Dashboard\Admin\AdminController;
 use App\Http\Controllers\Backend\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Backend\Admin\Dashboard\Role\RoleController;
+use App\Http\Controllers\Backend\Admin\Dashboard\World\WorldController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,8 +27,10 @@ Route::group(['as' => 'admin.'], function () {
     });
 
     ###################### End Of Reset Password Routes ###################
+
+    ######################        Role Routes      ###################
     Route::resource('/roles', RoleController::class)->middleware('admin')->except('show');
-    ###################### End Of Reset Password Routes ###################
+    ###################### End Of Role Routes ###################
 
     ######################        Admin Routes          ###################
     Route::resource('/admins', AdminController::class)->middleware(['admin'])->except('show');
@@ -36,6 +39,29 @@ Route::group(['as' => 'admin.'], function () {
         Route::get('/inactive' , 'inactiveAdmins')->name('admins.inactive') ;
     }) ;
     ######################      End Of Admin Routes     ###################
+
+    ######################        World Routes          #################
+    // Countries Management
+    Route::group(['prefix' => '/countries' , 'as' => 'world.'] , function(){
+        Route::controller(WorldController::class)->group(function(){
+            Route::get('/' ,  'countries')->name('countries') ;
+            Route::get('/{country_id}/change-status' , 'changeCountryStatus')->name('countries.change-status') ;
+        }) ;
+    }) ;
+    // End Of Countries Management
+
+
+    // Governments Management
+    Route::group(['as' => 'world.'] ,function(){
+        Route::controller(WorldController::class)->prefix('/governments')->group(function(){
+            Route::get('/' , 'governments')->name('governments') ;
+            Route::post('/change-shipping-price' , 'changeGovernmentShippingPrice')->name('changeGovernmentShippingPrice') ;
+            Route::get('/{government_id}/change-status' , 'changeGovernmentStatus')->name('governments.change-status') ;
+        }) ;
+    }) ;
+    // End Of Governments Management
+
+    ######################      End Of World Routes       ##################
 
 
 

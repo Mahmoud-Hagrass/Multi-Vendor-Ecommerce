@@ -18,8 +18,10 @@
   <!-- END PAGE LEVEL JS-->
   <!-- for toaster-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js"></script>
 <!-- for toaster-->
   @include('backend.admin.partials.toaster_notification')
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
 
 @stack('js')

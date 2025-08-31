@@ -156,6 +156,7 @@ return [
         'permissions'                       => 'الصلاحيات' ,
         'role_id'                           => 'الدور' ,
         'status'                            => 'الحالة' ,
+        'new_shipping_price'                => 'سعر الشحن الجديد'
     ],
 
 

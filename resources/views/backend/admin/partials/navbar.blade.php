@@ -180,7 +180,7 @@
                 <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0)" onclick="document.getElementById('delete_auth_admin').submit()">
-                  <i class="ft-power"></i> 
+                  <i class="ft-power"></i>
                   {{ __('dashboard.logout') }}
                 </a>
               </div>

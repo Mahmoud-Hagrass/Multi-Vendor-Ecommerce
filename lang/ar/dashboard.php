@@ -14,6 +14,7 @@ return [
     */
 
     'dashboard'             => 'لوحة التحكم',
+    'home'                  => 'الرئيسية' ,
     'logout'                => 'تسجيل الخروج',
     'roles_permissions'     => 'الادوار والصلاحيات',
     'role_name'             => 'اسم الدور (انجليزى)',
@@ -57,5 +58,28 @@ return [
     'access_denied'         => 'تم حظر الوصول للصفحة',
     'not_have_permission'   => 'ليس لديك صلاحية الوصول إلى هذه الصفحة',
     'back_to_dashboard'     => 'الرجوع الى لوحة التحكم',
+
+    'countries'             => 'الدول',
+    'country_name'          => 'اسم الدولة' ,
+    'country_phone_code'    => 'كود الجوال' ,
+    'country_governments_count' => 'عدد المحافظات' ,
+    'country_users_count'   => 'عدد المستخدمين' ,
+    'country_status'        => 'الحالة' ,
+    'country_change_status' => 'تغير الحالة' ,
+    'no_countries'          => 'لا يوجد دول',
+
+    'shipping_management'   => 'ادارة الشحن' ,
+    'countries_management'  => 'ادارة الدول' ,
+    'governments_management'  => 'ادارة المحافظات' ,
+    'governments'             => 'المحافظات' ,
+    'government_name'         => 'اسم المحافظة',
+    'government_cities_count' => 'عدد المدن' ,
+    'government_users_count'  => 'عدد المستخدمين' ,
+    'government_status'       => 'الحالة' ,
+    'government_change_status' => 'تغير الحالة' ,
+    'shippinng_price'          => 'سعر الشحن' ,
+    'shippinng_price_change'   => 'تغير سعر الشحن' ,
+    'change_government_shipping_price' => 'تغيير السعر' ,
+    'enter_new_shipping_price'     => 'ادخل سعر الشحن الجديد' ,
 
 ];

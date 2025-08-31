@@ -37,8 +37,6 @@ return [
         'admin_create'                           => 'Create Admin',
         'admin_update'                           => 'Update Admin',
         'admin_delete'                           => 'Delete Admin',
-        'admin_block'                            => 'Block Admin',
-        'admin_unblock'                          => 'Unblock Admin',
         'admin_active_list'                      => 'List Active Admins',
         'admin_inactive_list'                    => 'List Inactive Admins',
         'admin_change_status'                    => 'Change Admin Status' ,
@@ -52,10 +50,11 @@ return [
         'setting_show'                           => 'Show Settings',
         'setting_update'                         => 'Update Settings',
 
-        'government_shipping_price_show'         => 'Show Government Shipping',
-        'government_shipping_price_create'       => 'Create Government Shipping',
-        'government_shipping_price_update'       => 'Update Government Shipping',
-        'government_shipping_price_delete'       => 'Delete Government Shipping',
+        'government_shipping_management'         => 'Government Shipping Management' ,
+        'government_shipping_price_change'       => 'Government Shipping Price Change',
+        'government_change_status'               => 'Change Government Status',
+        'country_change_status'                  => 'Change Country Status',
+
 
         'faq_show'                               => 'Show FAQ',
         'faq_create'                             => 'Create FAQ',

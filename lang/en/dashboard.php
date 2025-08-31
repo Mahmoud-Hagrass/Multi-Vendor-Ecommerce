@@ -14,6 +14,7 @@ return [
     */
 
     'dashboard'             => 'Dashboard',
+    'home'                  => 'Home' , 
     'logout'                => 'Logout' ,
     'roles_permissions'     => 'Roles And Permissions' ,
     'role_name'             => 'Role Name(English)' ,
@@ -59,4 +60,26 @@ return [
     'not_have_permission'   => 'You Do Not Have Permission To Access This Page',
     'back_to_dashboard'     => 'Back To Dashboard',
 
+    'countries'             => 'Countries',
+    'country_name'          => 'Country Name' ,
+    'country_phone_code'    => 'Phone Code' ,
+    'country_governments_count' => 'Governments Count' ,
+    'country_users_count'   => 'Users Count' ,
+    'country_status'        => 'Status' ,
+    'country_change_status' => 'Change Status' ,
+    'no_countries'          => 'No Countries Found',
+
+    'shipping_management'   => 'Shipping Management' ,
+    'countries_management'  => 'Countries Management' ,
+    'governments_management'  => 'Governments Management' ,
+    'governments'             => 'Governments' ,
+    'government_name'         => 'Government Name',
+    'government_cities_count' => 'Cities Count' ,
+    'government_users_count'  => 'Users Count' ,
+    'government_status'       => 'Status' ,
+    'government_change_status' => 'Change Status' ,
+    'shippinng_price'          => 'Shipping Price' ,
+    'shippinng_price_change'   => 'Change Shipping Price' ,
+    'change_government_shipping_price' => 'Change Price' ,
+    'enter_new_shipping_price'     => 'Enter New Shipping Price' ,
 ];
