@@ -23,5 +23,6 @@
   @include('backend.admin.partials.toaster_notification')
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 @stack('js')

@@ -176,6 +176,12 @@ return [
         'g-recaptcha-response' => [
             'required' => 'Recaptcha Field Is Required',
         ],
+        'parent_id' => [
+        'self_parent'        => 'A category cannot be its own parent.',
+        'child_as_parent'    => 'You cannot select a child or descendant category as the parent.',
+        'not_main_category'  => 'The selected parent must be a main category (with no parent).',
+        'invalid_parent'     => 'The selected parent category is invalid.',
+        ],
     ],
 
     /*
@@ -201,7 +207,10 @@ return [
         'permissions'                     => 'Permissions' ,
         'role_id'                         => 'Role' ,
         'status'                          => 'Status' ,
-        'new_shipping_price'              => 'New Shipping Price' , 
+        'new_shipping_price'              => 'New Shipping Price' ,
+        'parent_id'                       => 'Parent Category' ,
+        'category_name.en'                => 'Category Name (English)' ,
+        'category_name.ar'                => 'Category Name (Arabic)' ,
     ],
 
 ];

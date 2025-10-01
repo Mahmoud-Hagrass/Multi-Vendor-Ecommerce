@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
            CountrySeeder::class ,
            GovernmentSeeder::class ,
            CitySeeder::class ,
+           CategorySeeder::class , 
        ]) ;
     }
 }

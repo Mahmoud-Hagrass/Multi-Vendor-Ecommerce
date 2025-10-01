@@ -4,8 +4,10 @@ namespace App\Providers;
 
 use App\Repositories\Admin\AdminRepository;
 use App\Repositories\Auth\AuthRepository;
+use App\Repositories\Category\CategoryRepository;
 use App\Repositories\Interfaces\AdminInterface;
 use App\Repositories\Interfaces\AuthInterface;
+use App\Repositories\Interfaces\CategoryInterface;
 use App\Repositories\Interfaces\PasswordResetInterface;
 use App\Repositories\Interfaces\RoleInterface;
 use App\Repositories\Interfaces\WorldInterface;
@@ -26,6 +28,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(RoleInterface::class , RoleRepository::class) ;
         $this->app->bind(AdminInterface::class , AdminRepository::class) ;
         $this->app->bind(WorldInterface::class , WorldRepository::class) ;
+        $this->app->bind(CategoryInterface::class , CategoryRepository::class) ;
     }
 
     /**

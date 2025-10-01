@@ -1,9 +1,6 @@
 @extends('backend.admin.master')
 @section('title', __('dashboard.countries'))
 @section('content')
-
-<div class="app-content content">
-    <div class="content-wrapper">
         <div class="content-body">
             <!-- Basic Tables start -->
             <div class="row">
@@ -88,8 +85,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
 @endsection
 

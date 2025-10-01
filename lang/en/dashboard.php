@@ -14,7 +14,7 @@ return [
     */
 
     'dashboard'             => 'Dashboard',
-    'home'                  => 'Home' , 
+    'home'                  => 'Home' ,
     'logout'                => 'Logout' ,
     'roles_permissions'     => 'Roles And Permissions' ,
     'role_name'             => 'Role Name(English)' ,
@@ -32,6 +32,7 @@ return [
     'actions'               => 'Actions',
     'edit'                  => 'Edit' ,
     'delete'                => 'Delete' ,
+    'change_status'         => 'Change Status' ,
     'admin_index'           => 'Admin Index Page' ,
     'admins'                => 'Admins',
     'admin_create'          => 'Create Admin',
@@ -82,4 +83,23 @@ return [
     'shippinng_price_change'   => 'Change Shipping Price' ,
     'change_government_shipping_price' => 'Change Price' ,
     'enter_new_shipping_price'     => 'Enter New Shipping Price' ,
+
+    'category_id'              => 'ID' ,
+    'category_name'            => 'Category Name'  ,
+    'category_name_en'         => 'Category Name (English)' ,
+    'category_name_ar'         => 'Category Name (Arabic)' ,
+    'category_parent'          => 'Category Parent' ,
+    'category_status'          => 'Category Status',
+    'category_created_at'      => 'Created Date' ,
+    'categories'               => 'Categories' ,
+    'categories_show'          => 'Categories Show' ,
+    'category_create'          => 'Create New Category' ,
+    'category_edit'            => 'Edit Category' ,
+    'category_delete'          => 'Delete Category' ,
+    'enter_category_name_en'   => 'Enter Category Name(English)' ,
+    'enter_category_name_ar'   => 'Enter Category Name(Arabic)' ,
+    'enter_category_parent'    => 'Enter Parent Category' ,
+    'enter_category_status'    => 'Enter Category Status' ,
+    'category_select'          => 'Select Category' ,
+
 ];

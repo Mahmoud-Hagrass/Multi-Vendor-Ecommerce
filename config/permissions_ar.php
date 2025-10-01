@@ -11,6 +11,7 @@ return [
         'category_create'                        => 'إنشاء تصنيف',
         'category_update'                        => 'تحديث تصنيف',
         'category_delete'                        => 'حذف تصنيف',
+        'category_change_status'                 => 'تغيير حالة التصنيف',
 
         'product_show'                           => 'عرض المنتجات',
         'product_create'                         => 'إنشاء منتج',

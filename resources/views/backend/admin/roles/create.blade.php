@@ -1,8 +1,6 @@
 @extends('backend.admin.master')
 @section('title', __('dashboard.role_create'))
 @section('content')
-    <div class="app-content content">
-        <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
                     <h3 class="content-header-title mb-0 d-inline-block">{{ __('dashboard.roles_permissions') }}</h3>
@@ -109,8 +107,6 @@
                     </div>
                 </section>
             </div>
-        </div>
-    </div>
     @push('js')
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>

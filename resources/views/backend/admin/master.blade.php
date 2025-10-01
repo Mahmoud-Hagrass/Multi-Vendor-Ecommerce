@@ -10,7 +10,11 @@
   @include('backend.admin.partials.navbar')
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   @include('backend.admin.partials.sidebar')
-  @yield('content')
+  <div class="app-content content">
+      <div class="content-wrapper">
+          @yield('content')
+      </div>
+  </div>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <!-- BEGIN VENDOR JS-->
   @include('backend.admin.partials.scripts')

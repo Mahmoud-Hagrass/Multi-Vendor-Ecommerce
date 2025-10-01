@@ -32,6 +32,7 @@ return [
     'actions'               => 'العمليات',
     'edit'                  => 'تعيديل' ,
     'delete'                => 'حذف' ,
+    'change_status'         => 'تغير الحالة' ,
     'admin_index'           => 'الصفحة الرئيسية للمشرفين' ,
     'admins'                => 'المشرفين',
     'admin_create'          => 'انشاء مشرف',
@@ -81,5 +82,24 @@ return [
     'shippinng_price_change'   => 'تغير سعر الشحن' ,
     'change_government_shipping_price' => 'تغيير السعر' ,
     'enter_new_shipping_price'     => 'ادخل سعر الشحن الجديد' ,
+
+    'category_id'              => 'الرقم التسلسلى' ,
+    'category_name'            => 'اسم التصنيف' ,
+    'category_name_en'         => '(بالانجليزى) اسم التصنيف' ,
+    'category_name_ar'         => '(بالعربى) اسم التصنيف' ,
+    'category_parent'          => 'التصنيف الرئسى' ,
+    'category_status'          => 'حالة التصنيف',
+    'category_created_at'      => 'تاريخ الانشاء' ,
+    'categories'               => 'التصنيفات' ,
+    'categories_show'          => 'عرض التصنيفات' ,
+    'category_create'          => 'انشاء تصنيف جديد' ,
+    'category_edit'            => 'تعديل تصنيف' ,
+    'category_delete'          => 'حذف تصنيف' ,
+    'enter_category_name_en'   => '(بالانجليزى) ادخل اسم التصنيف' ,
+    'enter_category_name_ar'   => '(بالعربي) ) ادخل اسم التصنيف' ,
+    'enter_category_parent'    => 'ادخل اسم التصنيف الرئيسى' ,
+    'enter_category_status'    => 'ادخل حالة التصنيف' ,
+    'category_select'          => 'اختر التصنيف' ,
+
 
 ];

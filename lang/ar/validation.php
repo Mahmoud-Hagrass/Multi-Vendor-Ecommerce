@@ -130,7 +130,13 @@ return [
         ],
         'g-recaptcha-response' => [
             'required' => 'يجب عليك التحقق من أنك لست روبوت',
-        ]
+        ],
+        'parent_id' => [
+        'self_parent'        => 'لا يمكن أن يكون التصنيف أبًا لنفسه.',
+        'child_as_parent'    => 'لا يمكن اختيار أحد الأبناء أو الأحفاد كأب.',
+        'not_main_category'  => 'يجب اختيار تصنيف رئيسي (ليس له أب).',
+        'invalid_parent'     => 'التصنيف الأب غير صالح.',
+        ],
     ],
 
     /*
@@ -156,7 +162,10 @@ return [
         'permissions'                       => 'الصلاحيات' ,
         'role_id'                           => 'الدور' ,
         'status'                            => 'الحالة' ,
-        'new_shipping_price'                => 'سعر الشحن الجديد'
+        'new_shipping_price'                => 'سعر الشحن الجديد' ,
+        'parent_id'                         => 'التصنيف الرئيسي' ,
+        'category_name.en'                  => 'اسم التصنيف (انجليزى)' ,
+        'category_name.ar'                  => 'اسم التصنيف (عربى)' ,
     ],
 
 

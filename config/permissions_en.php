@@ -11,6 +11,7 @@ return [
         'category_create'                        => 'Create Category',
         'category_update'                        => 'Update Category',
         'category_delete'                        => 'Delete Category',
+        'category_change_status'                 => 'Change Category Status',
 
         'product_show'                           => 'Show Product',
         'product_create'                         => 'Create Product',

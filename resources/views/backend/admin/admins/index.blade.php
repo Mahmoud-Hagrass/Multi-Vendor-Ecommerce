@@ -2,8 +2,6 @@
 @section('title', __('dashboard.admin_index'))
 
 @section('content')
-<div class="app-content content">
-    <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
             </div>
@@ -107,6 +105,4 @@
                 </div> <!-- /.col -->
             </div> <!-- /.row -->
         </div> <!-- /.content-body -->
-    </div> <!-- /.content-wrapper -->
-</div> <!-- /.app-content -->
 @endsection

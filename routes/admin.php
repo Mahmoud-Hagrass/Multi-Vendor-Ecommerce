@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\Admin\Auth\Password\ForgetPasswordController;
 use App\Http\Controllers\Backend\Admin\Auth\Password\PasswordResetController;
 use App\Http\Controllers\Backend\Admin\Dashboard\Admin\AdminController;
+use App\Http\Controllers\Backend\Admin\Dashboard\Category\CategoryController;
 use App\Http\Controllers\Backend\Admin\Dashboard\DashboardController;
 use App\Http\Controllers\Backend\Admin\Dashboard\Role\RoleController;
 use App\Http\Controllers\Backend\Admin\Dashboard\World\WorldController;
@@ -42,7 +43,7 @@ Route::group(['as' => 'admin.'], function () {
 
     ######################        World Routes          #################
     // Countries Management
-    Route::group(['prefix' => '/countries' , 'as' => 'world.'] , function(){
+    Route::group(['prefix' => '/countries' , 'as' => 'world.' , 'middleware' => ['admin']] , function(){
         Route::controller(WorldController::class)->group(function(){
             Route::get('/' ,  'countries')->name('countries') ;
             Route::get('/{country_id}/change-status' , 'changeCountryStatus')->name('countries.change-status') ;
@@ -53,7 +54,7 @@ Route::group(['as' => 'admin.'], function () {
 
     // Governments Management
     Route::group(['as' => 'world.'] ,function(){
-        Route::controller(WorldController::class)->prefix('/governments')->group(function(){
+        Route::controller(WorldController::class)->prefix('/governments')->middleware('admin')->group(function(){
             Route::get('/' , 'governments')->name('governments') ;
             Route::post('/change-shipping-price' , 'changeGovernmentShippingPrice')->name('changeGovernmentShippingPrice') ;
             Route::get('/{government_id}/change-status' , 'changeGovernmentStatus')->name('governments.change-status') ;
@@ -62,6 +63,14 @@ Route::group(['as' => 'admin.'], function () {
     // End Of Governments Management
 
     ######################      End Of World Routes       ##################
+
+    ######################        Category Routes          #################
+    Route::group(['as' => 'categories.', 'prefix' => '/categories' , 'controller' => CategoryController::class ,'middleware' => 'admin'] , function(){
+        Route::get('/yajra-all' , 'getAllCategoriesDataForYajraTable')->name('yajra.all') ;
+        Route::post('/change-status' , 'changeStatus')->name('change-status') ;
+    }) ;
+    Route::resource('/categories' , CategoryController::class)->except(['create' , 'show' , 'edit'])->middleware('admin') ;
+    ######################      End Of Category Routes       ##################
 
 
 

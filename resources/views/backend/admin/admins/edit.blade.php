@@ -1,8 +1,6 @@
 @extends('backend.admin.master')
 @section('title' , __('dashboard.admin_edit'))
 @section('content')
-    <div class="app-content content">
-    <div class="content-wrapper">
       <div class="content-header row">
       </div>
       <div class="content-body">
@@ -111,7 +109,5 @@
         </section>
         <!-- // Basic form layout section end -->
       </div>
-    </div>
-  </div>
 
 @endsection

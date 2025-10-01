@@ -73,6 +73,20 @@
                 </li>
             @endcan
 
+            <!-- Shipping Management -->
+            @can('category_show' , App\Models\Admin::class)
+                <li class=" nav-item">
+                    <a>
+                        <i class="la la-truck"></i>
+                        <span class="menu-title" data-i18n="nav.templates.main">{{ __('dashboard.categories') }}</span>
+                        <ul class="menu-content">
+                            <li>
+                                <a class="menu-item" href="{{ route('admin.categories.index') }}" data-i18n="nav.page_layouts.1_column">{{ __('dashboard.categories_show') }}</a>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+            @endcan
         </ul>
     </div>
 </div>
