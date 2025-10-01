@@ -11,9 +11,11 @@
                         <div class="card" style="min-height: 70vh;">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <h1 class="card-title">{{ __('dashboard.categories') }}</h1>
-                                <button type="button" data-toggle="modal" data-target="#create_category_modal" class="btn btn-primary">
-                                    <i class="fa fa-plus"></i> {{ __('dashboard.category_create') }}
-                                </button>
+                                @can('category_create' , App\Models\Admin::class)
+                                    <button type="button" data-toggle="modal" data-target="#create_category_modal" class="btn btn-primary">
+                                        <i class="fa fa-plus"></i> {{ __('dashboard.category_create') }}
+                                    </button>
+                                @endcan
                             </div>
 
                             <div class="card-content collapse show">
